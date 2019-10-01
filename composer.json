@@ -1,0 +1,21 @@
+{
+    "name": "vladayson/yii2-inkscape",
+    "description": "Yii2 inkscape wrapper",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","inkscape","svg","convert"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vladayson",
+            "email": "vladaysin@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "vladayson\\Inkscape\\": "src/"
+        }
+    }
+}
