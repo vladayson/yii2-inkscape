@@ -14,6 +14,16 @@ require_once dirname(__FILE__, 2) . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPA
 class Inkscape extends Component
 {
     /**
+     * @var null|int
+     */
+    private $width = null;
+
+    /**
+     * @var null|int
+     */
+    private $height = null;
+
+    /**
      * @param $svgFilename
      * @param $outputFilename
      * @param $format 'png', 'ps', 'eps', 'pdf', 'plain-svg'
@@ -23,5 +33,18 @@ class Inkscape extends Component
     {
         $ink = new \Inkscape($svgFilename);
         $ink->export($format, $outputFilename);
+    }
+
+    /**
+     * @param $width
+     * @param $height
+     * @return $this
+     */
+    public function setSize($width, $height): self
+    {
+        $this->width = $width;
+        $this->height = $height;
+
+        return $this;
     }
 }
