@@ -32,6 +32,9 @@ class Inkscape extends Component
     public function convert($svgFilename, $outputFilename, $format)
     {
         $ink = new \Inkscape($svgFilename);
+        if ($this->width && $this->height) {
+            $ink->setSize($this->width, $this->height);
+        }
         $ink->export($format, $outputFilename);
     }
 
